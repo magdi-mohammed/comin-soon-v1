@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> RAI </title>
+
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <!-- Counter Section -->
+  <section id="counter-section">
+      <div class="container">
+        <!-- logo  -->
+        <div class="logo-box">
+            <a href="index.html" target="_self">
+                <img class="logo" src="images/logo-white.png" alt="logo">
+            </a>
+        </div>
+        <!-- menu -->
+        <div class="menu">
+            <span class="menu-icon menu-icon">
+                <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+            </span>
+            <span class="icon">
+                <a href="index.html">
+                    <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+                </a>
+            </span>
+            <span class="icon" id="info">
+                <i class="fa fa-info fa-2x" aria-hidden="true"></i>
+            </span>
+            <span class="icon" id="our-work">
+                <i class="fa fa-briefcase fa-2x" aria-hidden="true"></i>
+            </span>
+            <span id="contact-us" class="icon">
+                <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+            </span>
+        </div>
+
+        <!-- nav -->
+        <nav class="nav">
+            <div id="info-sec" class="icon-target"></div>
+            <div id="our-work-sec" class="icon-target"></div>
+            <div id="contact-us-sec" class="icon-target"></div>
+        </nav>
+
+        <!-- social -->
+        <div class="social">
+            <span class="social-icon menu-icon">
+                <i class="fa fa-share fa-3x" aria-hidden="true"></i>
+            </span>
+            <span class="icon">
+                <a href="#">
+                    <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+                </a>
+            </span>
+            <span class="icon">
+                <a href="#">
+                    <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+                </a>
+            </span>
+            <span class="icon">
+                <a href="#">
+                    <i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i>
+                </a>
+            </span>
+        </div>
+        <!-- counter -->
+        <div class="counter">
+            <div class="countdown" data-date="2018-01-01"></div>
+        </div>
+        <!-- content -->
+        <div class="content">
+            <h1 class="content__main-heading">we are coming soon</h1>
+            <p class="content__main-text">subscribe to be notified when we are ready</p>
+        </div>
+        <!-- form -->
+        <form id="subscribe-form">
+            <div class="form-g">
+                <input type="text" class="">
+                <input type="submit" value="Subscribe">
+            </div>
+        </form>
+        <!-- sections -->
+        <div class="sections">
+            <!-- info sec -->
+            <div id="info-sec-content" class="section">
+                <div class="logo-box">
+                    <img src="images/logo-white.png">
+                </div>
+                <div class="heading">
+                    <h2>
+                        About Us
+                    </h2>
+                </div>
+            </div>
+            <!-- our work sec -->
+            <div id="our-work-sec-content" class="section">
+                <div class="logo-box">
+                    <img src="images/logo-white.png">
+                </div>
+                <div class="heading">
+                    <h2>
+                        our Work
+                    </h2>
+                </div>
+            </div>
+            <!-- contact us sec -->
+            <div id="contact-us-sec-content" class="section">
+                <div class="logo-box">
+                    <img src="images/logo-white.png">
+                </div>
+                <div class="heading">
+                    <h2>
+                        Contact Us
+                    </h2>
+                </div>
+            </div>
+        </div>
+      </div>
+  </section>
+  <!-- Counter Section -->
+
+  <!-- start the script -->
+  <script src="js/jquery-2.2.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/countdown.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script>
+      $(function () {
+          "use strict";
+          if ($(".countdown").length > 0) {
+              $(".countdown").countdown({
+                  countDown_days: "Days",
+                  countDown_hours: "Hours",
+                  countDown_minutes: "Minutes",
+                  countDown_seconds: "Seconds"
+              });
+          }
+      });
+  </script>
+  <!-- end the script -->
+</body>
+
+</html>

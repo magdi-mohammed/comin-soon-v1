@@ -1,0 +1,245 @@
+// import css files 
+
+@import "general";
+@import "framework";
+@import "responsive";
+
+#counter-section {
+  @extend %main-background;
+  color: #fff;
+  min-height: calc(100vh - 60px);
+  padding-top: 8rem,;
+  padding-bottom: 8rem;
+
+  // logo
+
+  .logo-box {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .logo {
+      width: 12rem;
+    }
+  }
+
+  // menu 
+  .menu {
+    position: fixed;
+    right: 6rem;
+    top: 6rem;
+    z-index: 5;
+
+    .menu-icon {
+      @extend %menu-icon;
+
+      &.active {
+        
+      }
+    }
+
+    .icon {
+      a {
+        padding: 25px;
+      }
+    }
+
+  }
+
+  // nav 
+
+  .nav {
+
+    position: fixed;
+    top: 6.5rem;
+    right: 11.5rem;
+    z-index: 3;
+
+    .icon-target {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 100%;
+      position: absolute;
+      @include scale(0);
+      @include transition(all, 0.5s, cubic-bezier(0.86, 0, 0.07, 1));
+
+      &.active {
+        @include scale(80);
+      }
+
+      &#info-sec {
+        background-image: radial-gradient(#7ed56f, #28b485);
+      }
+
+      &#our-work-sec {
+        background-image: radial-gradient(#06bebe, #1657b9);
+      }
+
+      &#contact-us-sec {
+        background-image: radial-gradient(#ce0a58, #f88db1);
+      }
+
+    }
+  }
+
+  // social media
+
+  .social {
+    position: fixed;
+    left: 6rem;
+    top: 6rem;
+    z-index: 5;
+
+    .social-icon {
+      @extend %menu-icon;
+    }
+
+    .icon {
+      a {
+        padding: 25px;
+      }
+    }
+
+  }
+
+  // counter 
+  .counter .countdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+
+    .countdown-container {
+      position: relative;
+
+      .countdown-heading {
+        font-size: 7rem;
+        letter-spacing: 0.2rem;
+      }
+
+      .countdown-value {
+        font-size: 1.6rem;
+        color: #dddddd
+      }
+
+      &:not(:last-of-type):after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 160%;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #777;
+        height: 0.2rem;
+        width: 10rem;
+      }
+    }
+
+    .countdown-container > span  {
+      display: block;
+    }
+  }
+
+  // content 
+
+  .content {
+    text-align: center;
+
+    .content__main-heading {
+      font-size: 3.2rem;
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1.2rem;
+    }
+
+    .content__main-text {
+      font-size: 2rem;
+      letter-spacing: 0.3rem;
+      margin-top: 0;
+      margin-bottom: 4rem;
+    }
+  }
+
+  // form
+
+  #subscribe-form {
+    .form-g {
+      position: relative;
+
+      // form input
+      input[type=text] {
+        border-radius: 3rem;
+        border: none;
+        padding: 1rem;
+        color: #777;
+        font-size: 2rem;
+        font-family: sans-serif;
+        width: 400px;
+        display: block;
+        margin: auto;
+      }
+
+      // form send 
+      input[type="submit"] {
+        color: #fff;
+        height: 40px;
+        margin-top: 4px;
+        border: none;
+        border-radius: 3rem;
+        font-weight: bold;
+        font-size: 1.6rem;
+        position: absolute;
+        top: 0;
+        right: 375px;
+
+        @extend %main-background;
+      }
+    }
+  }
+
+  // sections content
+  .sections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 3rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    .section {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      @include transition(all, 0.3s, ease, 0.2s);
+
+      .logo-box {
+        margin-bottom: 4rem;
+      }
+
+      .heading {
+        text-align: center;
+      }
+
+      // &#info-sec-content {
+
+      // }
+      // &#our-work-sec-content {
+
+      // }
+      // &#contact-us-sec-content {
+
+      // }
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 4;
+        position: absolute;
+        width: calc(100% - 60px);
+      }
+
+    }
+  }
+}

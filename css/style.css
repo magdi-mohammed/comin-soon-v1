@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+html, body {
+  font-size: 10px; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 30px; }
+
+#counter-section, #counter-section #subscribe-form .form-g input[type="submit"] {
+  background: rgba(52, 131, 255, 0.75);
+  background: -webkit-linear-gradient(-45deg, rgba(205, 15, 216, 0.75) 0%, rgba(52, 131, 255, 0.75) 100%);
+  background: -o-linear-gradient(-45deg, rgba(205, 15, 216, 0.75) 0%, rgba(52, 131, 255, 0.75) 100%);
+  background: -moz-linear-gradient(-45deg, rgba(205, 15, 216, 0.75) 0%, rgba(52, 131, 255, 0.75) 100%);
+  background: linear-gradient(-45deg, rgba(205, 15, 216, 0.75) 0%, rgba(52, 131, 255, 0.75) 100%); }
+
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none; }
+
+#counter-section .menu .menu-icon, #counter-section .social .social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  background: #fff;
+  color: #777;
+  border-radius: 100%;
+  cursor: pointer;
+  opacity: 0.5;
+  z-index: 9;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
+  #counter-section .menu .active.menu-icon, #counter-section .social .active.social-icon {
+    opacity: 0.7; }
+  #counter-section .menu .menu-icon:hover, #counter-section .social .social-icon:hover {
+    opacity: 1; }
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  background: #fff;
+  color: #777;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  z-index: 28;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  margin-bottom: 1rem;
+  -webkit-transition: top 0.3s ease-in-out 0s;
+  -moz-transition: top 0.3s ease-in-out 0s;
+  -o-transition: top 0.3s ease-in-out 0s;
+  transition: top 0.3s ease-in-out 0s; }
+
+#counter-section {
+  color: #fff;
+  min-height: calc(100vh - 60px);
+  padding-top: 8rem;
+  padding-bottom: 8rem; }
+  #counter-section .logo-box {
+    text-align: center;
+    margin-bottom: 2rem; }
+    #counter-section .logo-box .logo {
+      width: 12rem; }
+  #counter-section .menu {
+    position: fixed;
+    right: 6rem;
+    top: 6rem;
+    z-index: 5; }
+    #counter-section .menu .icon a {
+      padding: 25px; }
+  #counter-section .nav {
+    position: fixed;
+    top: 6.5rem;
+    right: 11.5rem;
+    z-index: 3; }
+    #counter-section .nav .icon-target {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 100%;
+      position: absolute;
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -o-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+      -moz-transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+      -o-transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+      transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0s; }
+      #counter-section .nav .icon-target.active {
+        -webkit-transform: scale(80);
+        -moz-transform: scale(80);
+        -o-transform: scale(80);
+        -ms-transform: scale(80);
+        transform: scale(80); }
+      #counter-section .nav .icon-target#info-sec {
+        background-image: radial-gradient(#7ed56f, #28b485); }
+      #counter-section .nav .icon-target#our-work-sec {
+        background-image: radial-gradient(#06bebe, #1657b9); }
+      #counter-section .nav .icon-target#contact-us-sec {
+        background-image: radial-gradient(#ce0a58, #f88db1); }
+  #counter-section .social {
+    position: fixed;
+    left: 6rem;
+    top: 6rem;
+    z-index: 5; }
+    #counter-section .social .icon a {
+      padding: 25px; }
+  #counter-section .counter .countdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center; }
+    #counter-section .counter .countdown .countdown-container {
+      position: relative; }
+      #counter-section .counter .countdown .countdown-container .countdown-heading {
+        font-size: 7rem;
+        letter-spacing: 0.2rem; }
+      #counter-section .counter .countdown .countdown-container .countdown-value {
+        font-size: 1.6rem;
+        color: #dddddd; }
+      #counter-section .counter .countdown .countdown-container:not(:last-of-type):after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 160%;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #777;
+        height: 0.2rem;
+        width: 10rem; }
+    #counter-section .counter .countdown .countdown-container > span {
+      display: block; }
+  #counter-section .content {
+    text-align: center; }
+    #counter-section .content .content__main-heading {
+      font-size: 3.2rem;
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1.2rem; }
+    #counter-section .content .content__main-text {
+      font-size: 2rem;
+      letter-spacing: 0.3rem;
+      margin-top: 0;
+      margin-bottom: 4rem; }
+  #counter-section #subscribe-form .form-g {
+    position: relative; }
+    #counter-section #subscribe-form .form-g input[type=text] {
+      border-radius: 3rem;
+      border: none;
+      padding: 1rem;
+      color: #777;
+      font-size: 2rem;
+      font-family: sans-serif;
+      width: 400px;
+      display: block;
+      margin: auto; }
+    #counter-section #subscribe-form .form-g input[type="submit"] {
+      color: #fff;
+      height: 40px;
+      margin-top: 4px;
+      border: none;
+      border-radius: 3rem;
+      font-weight: bold;
+      font-size: 1.6rem;
+      position: absolute;
+      top: 0;
+      right: 375px; }
+  #counter-section .sections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 3rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem; }
+    #counter-section .sections .section {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      -webkit-transition: all 0.3s ease 0.2s;
+      -moz-transition: all 0.3s ease 0.2s;
+      -o-transition: all 0.3s ease 0.2s;
+      transition: all 0.3s ease 0.2s; }
+      #counter-section .sections .section .logo-box {
+        margin-bottom: 4rem; }
+      #counter-section .sections .section .heading {
+        text-align: center; }
+      #counter-section .sections .section.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 4;
+        position: absolute;
+        width: calc(100% - 60px); }
+
+/*# sourceMappingURL=style.css.map */
